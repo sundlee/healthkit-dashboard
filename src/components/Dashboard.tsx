@@ -401,7 +401,7 @@ export default function Dashboard({
 
       {/* Trend + weekday */}
       <div className="mb-6 grid gap-6 lg:grid-cols-[2fr_1fr]">
-        <Card title={`장기 추세 · ${meta.label}`} subtitle="30일 이동평균 · 아래 슬라이더로 기간 확대">
+        <Card title={`장기 추세 · ${meta.label}`} subtitle="30일 이동평균">
           <TrendChart data={trend} metric={metric} />
         </Card>
         <Card title="요일별 패턴" subtitle={`${scopeLabel} · 요일별 평균 ${meta.label}`}>
@@ -454,7 +454,7 @@ function DataTable({
   return (
     <details className="mt-4 text-sm">
       <summary className="cursor-pointer text-ink-2 hover:text-ink">표로 보기</summary>
-      <div className="mt-2 overflow-x-auto rounded-lg border border-line">
+      <div className="mt-2 rounded-lg border border-line">
         <table className="tabular w-full text-right">
           <thead className="bg-surface text-xs text-ink-2">
             {view === "day" ? (
