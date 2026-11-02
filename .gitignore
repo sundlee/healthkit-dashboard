@@ -44,3 +44,6 @@ next-env.d.ts
 *.json.bak
 HealthExport_*.json
 .playwright-mcp/
+
+.vercel
+.env*
