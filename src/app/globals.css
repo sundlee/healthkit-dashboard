@@ -63,7 +63,13 @@
   --font-sans: system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
+html {
+  /* page scrolls on the browser's own scrollbar; reserve its space so layout doesn't shift */
+  scrollbar-gutter: stable;
+}
+
 body {
+  margin: 0;
   background: var(--page);
   color: var(--text-primary);
   font-family: var(--font-sans);

@@ -187,7 +187,7 @@ export default function Dashboard({
     view === "day" ? dayRows.every((r) => r.value === null) : activeRows.every((r) => r.value === null);
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-6 sm:py-8">
+    <main className="mx-auto w-full max-w-6xl px-5 py-6 sm:px-8 sm:py-8 lg:px-12">
       {/* Header */}
       <header className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
@@ -227,7 +227,7 @@ export default function Dashboard({
       </header>
 
       {/* Filters — one row above the charts */}
-      <div className="sticky top-0 z-10 -mx-4 mb-4 flex flex-wrap items-center gap-2 border-b border-line bg-page/90 px-4 py-3 backdrop-blur">
+      <div className="sticky top-0 z-10 -mx-5 mb-4 flex flex-wrap items-center gap-2 border-b border-line bg-page/90 px-5 py-3 backdrop-blur sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
         <Segmented<View>
           label="기간 단위"
           value={view}
@@ -454,9 +454,9 @@ function DataTable({
   return (
     <details className="mt-4 text-sm">
       <summary className="cursor-pointer text-ink-2 hover:text-ink">표로 보기</summary>
-      <div className="mt-2 max-h-80 overflow-auto rounded-lg border border-line">
+      <div className="mt-2 overflow-x-auto rounded-lg border border-line">
         <table className="tabular w-full text-right">
-          <thead className="sticky top-0 bg-surface text-xs text-ink-2">
+          <thead className="bg-surface text-xs text-ink-2">
             {view === "day" ? (
               <tr>
                 <th className="px-3 py-2 text-left font-medium">날짜</th>
